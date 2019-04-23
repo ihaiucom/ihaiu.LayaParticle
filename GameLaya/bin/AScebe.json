@@ -1,0 +1,1 @@
+{"type":"Scene","props":{"width":1136,"height":640},"compId":2,"child":[{"type":"Particle2D","props":{"y":2699,"x":2686,"url":"AAA.part","runtime":"laya.particle.Particle2D"},"compId":3}],"loadList":[],"loadList3D":[]}

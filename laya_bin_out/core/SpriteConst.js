@@ -1,0 +1,81 @@
+
+
+/**
+*@private
+*/
+//class laya.display.SpriteConst
+var SpriteConst=(function(){
+	function SpriteConst(){}
+	__class(SpriteConst,'laya.display.SpriteConst');
+	SpriteConst.POSRENDERTYPE=0;
+	SpriteConst.POSBUFFERBEGIN=1;
+	SpriteConst.POSBUFFEREND=2;
+	SpriteConst.POSFRAMECOUNT=3;
+	SpriteConst.POSREPAINT=4;
+	SpriteConst.POSVISIBLE_NATIVE=5;
+	SpriteConst.POSX=6;
+	SpriteConst.POSY=7;
+	SpriteConst.POSPIVOTX=8;
+	SpriteConst.POSPIVOTY=9;
+	SpriteConst.POSSCALEX=10;
+	SpriteConst.POSSCALEY=11;
+	SpriteConst.POSSKEWX=12;
+	SpriteConst.POSSKEWY=13;
+	SpriteConst.POSROTATION=14;
+	SpriteConst.POSTRANSFORM_FLAG=15;
+	SpriteConst.POSMATRIX=16;
+	SpriteConst.POSCOLOR=22;
+	SpriteConst.POSGRAPICS=23;
+	SpriteConst.POSSIM_TEXTURE_ID=24;
+	SpriteConst.POSSIM_TEXTURE_DATA=25;
+	SpriteConst.POSLAYAGL3D=26;
+	SpriteConst.POSCUSTOM=27;
+	SpriteConst.POSCLIP=28;
+	SpriteConst.POSCLIP_NEG_POS=32;
+	SpriteConst.POSCOLORFILTER_COLOR=34;
+	SpriteConst.POSCOLORFILTER_ALPHA=50;
+	SpriteConst.POSCALLBACK_OBJ_ID=54;
+	SpriteConst.POSCUSTOM_CALLBACK_FUN_ID=55;
+	SpriteConst.POSCANVAS_CALLBACK_FUN_ID=56;
+	SpriteConst.POSCANVAS_CALLBACK_END_FUN_ID=57;
+	SpriteConst.POSCANVAS_BEGIN_CMD_ID=58;
+	SpriteConst.POSCANVAS_END_CMD_ID=59;
+	SpriteConst.POSCANVAS_DRAW_TARGET_CMD_ID=60;
+	SpriteConst.POSCANVAS_DRAW_TARGET_PARAM_ID=61;
+	SpriteConst.POSLAYA3D_FUN_ID=62;
+	SpriteConst.POSCACHE_CANVAS_SKIP_PAINT_FLAG=63;
+	SpriteConst.POSFILTER_BEGIN_CMD_ID=64;
+	SpriteConst.POSFILTER_CALLBACK_FUN_ID=65;
+	SpriteConst.POSFILTER_END_CMD_ID=66;
+	SpriteConst.POSFILTER_END_CALLBACK_FUN_ID=67;
+	SpriteConst.POSGRAPHICS_CALLBACK_FUN_ID=68;
+	SpriteConst.POSMASK_CALLBACK_FUN_ID=69;
+	SpriteConst.POSMASK_CMD_ID=70;
+	SpriteConst.POSBLEND_SRC=71;
+	SpriteConst.POSBLEND_DEST=72;
+	SpriteConst.POSSIM_RECT_FILL_CMD=73;
+	SpriteConst.POSSIM_RECT_FILL_DATA=74;
+	SpriteConst.POSSIM_RECT_STROKE_CMD=75;
+	SpriteConst.POSSIM_RECT_STROKE_DATA=76;
+	SpriteConst.POSSIZE=77;
+	SpriteConst.ALPHA=0x01;
+	SpriteConst.TRANSFORM=0x02;
+	SpriteConst.BLEND=0x04;
+	SpriteConst.CANVAS=0x08;
+	SpriteConst.FILTERS=0x10;
+	SpriteConst.MASK=0x20;
+	SpriteConst.CLIP=0x40;
+	SpriteConst.STYLE=0x80;
+	SpriteConst.TEXTURE=0x100;
+	SpriteConst.GRAPHICS=0x200;
+	SpriteConst.LAYAGL3D=0x400;
+	SpriteConst.CUSTOM=0x800;
+	SpriteConst.ONECHILD=0x1000;
+	SpriteConst.CHILDS=0x2000;
+	SpriteConst.REPAINT_NONE=0;
+	SpriteConst.REPAINT_NODE=0x01;
+	SpriteConst.REPAINT_CACHE=0x02;
+	SpriteConst.REPAINT_ALL=0x03;
+	return SpriteConst;
+})()
+
