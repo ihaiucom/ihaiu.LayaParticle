@@ -1,7 +1,7 @@
 {
 	"textureName": "res/particles/texture.png",
 	"positionVariance": {
-		"0": 0,
+		"0": 100,
 		"1": 0,
 		"2": 0
 	},
@@ -25,7 +25,9 @@
 	"maxStartSize": 0,
 	"maxStartRadius": 92.2,
 	"maxRotateSpeed": 0,
-	"maxPartices": 120,
+	"maxPartices": 100,
+	"duration": 2,
+	"emissionRate": 10,
 	"maxHorizontalVelocity": -15,
 	"maxHorizontalEndRadian": 0,
 	"maxEndSize": 20.29,
@@ -43,7 +45,6 @@
 	},
 	"endVelocity": 0.1,
 	"emitterVelocitySensitivity": 1,
-	"duration": 18,
 	"colorComponentInter": true,
 	"blendState": 1,
 	"ageAddScale": 7.58,
@@ -55,7 +56,6 @@
 	"minVerticalStartRadian": 0,
 	"maxVerticalStartRadian": 0,
 	"emitterType": "null",
-	"emissionRate": 0,
 	"sphereEmitterRadius": 1,
 	"sphereEmitterVelocity": 0,
 	"sphereEmitterVelocityAddVariance": 0,

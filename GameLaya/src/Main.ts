@@ -1,11 +1,15 @@
 import GameConfig from "./GameConfig";
 
 import Loader = Laya.Loader;
-import ParticleShader from "./particle/ParticleShader";
 import Game from "./Game";
-import Particle2D from "./particle/Particle2D";
-import ParticleSetting from "./particle/ParticleSetting";
-// import Particle2D = Laya.Particle2D;
+// import ParticleShader from "./particle/ParticleShader";
+// import Particle2D from "./particle/Particle2D";
+// import ParticleSetting from "./particle/ParticleSetting";
+
+
+import ParticleShader from "./ihaiuparticle/ParticleShader";
+import Particle2D from "./ihaiuparticle/Particle2D";
+import ParticleSetting from "./ihaiuparticle/ParticleSetting";
 
 class Main {
 	constructor() {
@@ -44,7 +48,7 @@ class Main {
 		this.sp.x = Laya.stage.width / 2;
 		this.sp.y = Laya.stage.height / 2;
 		window['pp'] = this.sp;
-		this.sp.graphics.drawCircle(0, 0, 30, '#FF0000', '#00FF00', 5);
+		this.sp.graphics.drawCircle(0, 0, 5, '#FF0000', '#00FF00', 5);
 
 		Laya.stage.on(Laya.Event.MOUSE_DOWN, this, this.onMouseDown);
 		Laya.stage.on(Laya.Event.MOUSE_UP, this, this.onMouseUp);
