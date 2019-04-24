@@ -1,65 +1,37 @@
 {
 	"textureName": "res/particles/texture.png",
 	"positionVariance": {
-		"0": 50,
+		"0": 0,
 		"1": 0,
 		"2": 0
 	},
+	"minVerticalVelocity": 0.1,
+	"minVerticalEndRadian": 0,
+	"minStartSize": 0,
+	"minStartRadius": 0,
+	"minRotateSpeed": 0,
+	"minHorizontalVelocity": 0,
+	"minHorizontalEndRadian": 0,
+	"minEndSize": 65.35,
+	"minEndRadius": 0,
 	"minColor": {
 		"0": 0.15,
 		"1": 0.92,
 		"2": 0.91,
 		"3": 0.6000000238418579
 	},
-
-
-
-	"maxPartices": 100,
-	"duration": 5,
-	"emissionRate": 100,
-
-	"minStartSize": 20,
-	"maxStartSize": 60,
-	"maxEndSize": 0,
-	"minEndSize": 0,
-	
-	"minRotateSpeed": 0.5,
-	"maxRotateSpeed": 1,
-
-	
-	"minStartRadius": 0,
-	"maxStartRadius": 0,
-
-	"minEndRadius": 0,
-	"maxEndRadius": 0,
-
-	
-	"minHorizontalStartRadian": 0,
-	"minVerticalStartRadian": 0,
-
-	"maxHorizontalStartRadian": 0,
-	"maxVerticalStartRadian": 0,
-
-	"minVerticalEndRadian": 0,
-	"minHorizontalEndRadian": 0,
-	
-	"maxHorizontalEndRadian": 0,
+	"maxVerticalVelocity": 0,
 	"maxVerticalEndRadian": 0,
-
-
-
-
-	
-	"minHorizontalVelocity": 50,
-	"maxHorizontalVelocity": 100,
-
-	"minVerticalVelocity": 100,
-	"maxVerticalVelocity": 200,
-
-
-	"endVelocity": 0.1,
-	"emitterVelocitySensitivity": 1,
-
+	"maxStartSize": 0,
+	"maxStartRadius": 0,
+	"maxRotateSpeed": 0,
+	"maxPartices": 300,
+	"duration": 5,
+	"emissionRate": 60,
+	"maxHorizontalVelocity": 0,
+	"maxHorizontalEndRadian": 0,
+	"maxEndSize": 20.29,
+	"maxEndRadius": 86.64,
 	"maxColor": {
 		"0": 0.57,
 		"1": 1,
@@ -68,15 +40,21 @@
 	},
 	"gravity": {
 		"0": 0,
-		"1": -100,
+		"1": 0,
 		"2": 0
 	},
+	"endVelocity": 0.1,
+	"emitterVelocitySensitivity": 1,
 	"colorComponentInter": true,
 	"blendState": 1,
 	"ageAddScale": 7.58,
 	"backColor": "#000000",
 	"textureFileName": "comp\\clip_num.png",
 	"textureCount": 1,
+	"minHorizontalStartRadian": 0,
+	"maxHorizontalStartRadian": 0,
+	"minVerticalStartRadian": 0,
+	"maxVerticalStartRadian": 0,
 	"emitterType": "null",
 	"sphereEmitterRadius": 1,
 	"sphereEmitterVelocity": 0,
