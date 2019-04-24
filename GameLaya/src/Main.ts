@@ -1,8 +1,11 @@
 import GameConfig from "./GameConfig";
 
 import Loader = Laya.Loader;
-import Particle2D = Laya.Particle2D;
-import ParticleSetting = Laya.ParticleSetting;
+import ParticleShader from "./particle/ParticleShader";
+import Game from "./Game";
+import Particle2D from "./particle/Particle2D";
+import ParticleSetting from "./particle/ParticleSetting";
+// import Particle2D = Laya.Particle2D;
 
 class Main {
 	constructor() {
@@ -23,11 +26,12 @@ class Main {
 		Laya.alertGlobalError = true;
 
 		//激活资源版本控制，version.json由IDE发布功能自动生成，如果没有也不影响后续流程
-		Laya.ResourceVersion.enable("version.json", Laya.Handler.create(this, this.onVersionLoaded), Laya.ResourceVersion.FILENAME_VERSION);
+		// Laya.ResourceVersion.enable("version.json", Laya.Handler.create(this, this.onVersionLoaded), Laya.ResourceVersion.FILENAME_VERSION);
 
 
 		// Laya.loader.load("res/particles/particleNew.part", Laya.Handler.create(this, this.onAssetsLoaded), null, Loader.JSON);
-		Laya.loader.load("res/particles/AAA.part", Laya.Handler.create(this, this.onAssetsLoaded), null, Loader.JSON);
+		// Laya.loader.load("res/particles/AAA.part", Laya.Handler.create(this, this.onAssetsLoaded), null, Loader.JSON);
+		this.InitSync();
 	}
 
 	private sp: Particle2D;
@@ -40,7 +44,23 @@ class Main {
 		this.sp.x = Laya.stage.width / 2;
 		this.sp.y = Laya.stage.height / 2;
 		window['pp'] = this.sp;
+		this.sp.graphics.drawCircle(0, 0, 30, '#FF0000', '#00FF00', 5);
+
+		Laya.stage.on(Laya.Event.MOUSE_DOWN, this, this.onMouseDown);
+		Laya.stage.off(Laya.Event.MOUSE_UP, this, this.onMouseDown);
 	}
+
+	onMouseDown()
+	{
+		Laya.stage.on(Laya.Event.MOUSE_MOVE, this, this.onMouseMove);
+	}
+
+	onMouseMove(e:Laya.Event)
+	{
+		this.sp.x = e.stageX;
+		this.sp.y = e.stageY;
+	}
+
 
 	onVersionLoaded(): void {
 		//激活大小图映射，加载小图的时候，如果发现小图在大图合集里面，则优先加载大图合集，而不是小图
@@ -50,6 +70,13 @@ class Main {
 	onConfigLoaded(): void {
 		//加载IDE指定的场景
 		GameConfig.startScene && Laya.Scene.open(GameConfig.startScene);
+	}
+
+	async InitSync()
+	{
+		await ParticleShader.install();
+		let settings:ParticleSetting = await Game.asset.loadAsync("res/particles/AAA.part", Loader.JSON);
+		this.onAssetsLoaded(settings);
 	}
 }
 //激活启动类

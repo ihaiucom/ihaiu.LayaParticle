@@ -8,10 +8,14 @@ import MeshParticle2D = Laya.MeshParticle2D;
 import ISubmit = Laya.ISubmit;
 import WebGL = Laya.WebGL;
 import WebGLContext = Laya.WebGLContext;
+import Stat = Laya.Stat;
+
+
+// import ParticleTemplateWebGL = Laya.ParticleTemplateWebGL;
+
 
 
 declare var ParamData:any;
-declare var Stat: any | Laya.Stat;
 
 export default class ParticleTemplate2D extends ParticleTemplateWebGL implements ISubmit
 {
@@ -138,7 +142,7 @@ export default class ParticleTemplate2D extends ParticleTemplateWebGL implements
 					if (this._firstFreeElement > 0)
 						WebGL.mainContext.drawElements(WebGLContext.TRIANGLES,this._firstFreeElement *6, WebGLContext.UNSIGNED_SHORT, 0);
 				}
-				Stat.drawCall++;
+				!Stat["drawCall"] ? Stat["drawCall"] = 1 : Stat["drawCall"]++;
 			}
 			this._drawCounter++;
 		}

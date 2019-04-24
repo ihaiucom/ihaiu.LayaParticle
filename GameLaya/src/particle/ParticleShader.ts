@@ -1,13 +1,15 @@
+import Game from "../Game";
+
 export default class ParticleShader extends Laya.Shader
 {
     constructor()
     {
-        let vs = "";
-        let ps = "";
+        let vs = ParticleShader.vs;
+        let ps = ParticleShader.ps;
         super(
             vs, 
             ps, 
-            "ParticleShader", // saveName
+            ParticleShader.shaderName + "2", // saveName
             null, // nameMap
             // bindAttrib
             [
@@ -25,4 +27,20 @@ export default class ParticleShader extends Laya.Shader
             ]
         );
     }
+
+    static shaderName = "ParticleShader";
+    static vs: string;
+    static ps: string;
+
+    /**
+     * 加载Shader
+     */
+    public static async install()
+    {
+        this.vs = await Game.asset.loadShaderVSAsync(this.shaderName);
+        this.ps = await Game.asset.loadShaderPSAsync(this.shaderName);
+    }
+
+
+
 }

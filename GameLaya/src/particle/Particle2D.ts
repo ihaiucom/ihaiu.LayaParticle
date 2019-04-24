@@ -5,8 +5,11 @@ import ParticleSetting from "./ParticleSetting";
 import ParticleTemplate2D from "./ParticleTemplate2D";
 import ParticleTemplateCanvas from "./ParticleTemplateCanvas";
 import Emitter2D from "./Emitter2D";
-import ParticleTemplateBase from "./ParticleTemplateBase";
-import ParticleTemplateWebGL from "./ParticleTemplateWebGL";
+
+
+// import ParticleTemplate2D = Laya.ParticleTemplate2D;
+// import Emitter2D = Laya.Emitter2D;
+// import ParticleTemplateCanvas = Laya.ParticleTemplateCanvas;
 
 export default class Particle2D extends Laya.Sprite
 {
@@ -82,11 +85,11 @@ export default class Particle2D extends Laya.Sprite
 
        if(!this._emitter)
        {
-           this._emitter = new Emitter2D(this._particleTemplate);
+           this._emitter = new Emitter2D(<any>this._particleTemplate);
        }
        else
        {
-           this._emitter.template=this._particleTemplate;
+           this._emitter.template=<any>this._particleTemplate;
        }
 
        if (this.autoPlay)
@@ -152,8 +155,8 @@ export default class Particle2D extends Laya.Sprite
 
             var sv=(<ParticleTemplate2D>this._particleTemplate).sv;
             // TODO ZF
-			// sv.u_mmat=this._matrix4;
-			sv.mmat=this._matrix4;
+			sv["u_mmat"]=this._matrix4;
+			// sv.mmat=this._matrix4;
        }
 
        if(this._canvasTemplate)
@@ -195,3 +198,5 @@ export default class Particle2D extends Laya.Sprite
 
 
 }
+
+window["Particle2D"] = Particle2D;

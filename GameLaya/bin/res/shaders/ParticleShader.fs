@@ -12,4 +12,5 @@ void main()
 {	
 	gl_FragColor=texture2D(u_texture,v_TextureCoordinate)*v_Color;
 	gl_FragColor.xyz *= v_Color.w;
+    
 }

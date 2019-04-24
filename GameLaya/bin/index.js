@@ -14,5 +14,8 @@ loadLib("libs/laya.ui.js");
 loadLib("libs/laya.physics.js");
 // loadLib("libs/laya.effect.js");
 loadLib("libs/laya.particle.js");
+
+// 扩展
+loadLib("libs/game/awaiter.js")
 //-----libs-end-------
 loadLib("js/bundle.js");
