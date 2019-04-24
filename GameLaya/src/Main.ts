@@ -47,14 +47,20 @@ class Main {
 		this.sp.graphics.drawCircle(0, 0, 30, '#FF0000', '#00FF00', 5);
 
 		Laya.stage.on(Laya.Event.MOUSE_DOWN, this, this.onMouseDown);
-		Laya.stage.off(Laya.Event.MOUSE_UP, this, this.onMouseDown);
+		Laya.stage.on(Laya.Event.MOUSE_UP, this, this.onMouseUp);
 	}
 
-	onMouseDown()
+	onMouseDown(e:Laya.Event)
 	{
 		Laya.stage.on(Laya.Event.MOUSE_MOVE, this, this.onMouseMove);
+		this.sp.x = e.stageX;
+		this.sp.y = e.stageY;
 	}
 
+	onMouseUp()
+	{
+		Laya.stage.off(Laya.Event.MOUSE_MOVE, this, this.onMouseMove);
+	}
 	onMouseMove(e:Laya.Event)
 	{
 		this.sp.x = e.stageX;

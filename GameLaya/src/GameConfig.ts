@@ -3,7 +3,6 @@ import GameUI from "./script/GameUI"
 import GameControl from "./script/GameControl"
 import Bullet from "./script/Bullet"
 import DropBox from "./script/DropBox"
-import Particle2D from "./particle/Particle2D";
 /*
 * 游戏初始化配置;
 */
@@ -23,11 +22,10 @@ export default class GameConfig{
     constructor(){}
     static init(){
         var reg: Function = Laya.ClassUtils.regClass;
-        // reg("Particle2D", Particle2D);
-        // reg("script/GameUI.ts",GameUI);
-        // reg("script/GameControl.ts",GameControl);
-        // reg("script/Bullet.ts",Bullet);
-        // reg("script/DropBox.ts",DropBox);
+        reg("script/GameUI.ts",GameUI);
+        reg("script/GameControl.ts",GameControl);
+        reg("script/Bullet.ts",Bullet);
+        reg("script/DropBox.ts",DropBox);
     }
 }
 GameConfig.init();
